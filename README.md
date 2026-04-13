@@ -6,3 +6,19 @@
 - Add navbar by using daisyui
 - Install react-router-dom
 - create BrowserRouter >Routes >Route /= <Body> >RouterChildren (outlet)
+- install axios
+- CORS - install cors in backend => add middleware to do configuration: origin, credentials: true
+- install redux toolkit
+- confugure store & Add slice for user
+- dispatched and subscribed updated in navbar as per login
+- moved to constant
+- 
+- db
+  - Create free clustor in mongodb
+  - create user
+  - get connection string
+  - install mongodb compass and connect with connection string
+  - npm install mongodb
+  - create db and collection
+  - crud operation from documentation
+  
