@@ -9,10 +9,11 @@ const Login = () => {
   const [password, setPassword] = useState('Dappa22@2');
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [error, setError] = useState(null);
 
   const handleLogin = async() => {
     try {
-      console.log(email, password)
+      // console.log(email, password)
       const res = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: {
@@ -22,11 +23,12 @@ const Login = () => {
         credentials: 'include'
       })
       const data = await res.json();
-      console.log(data)
+      // console.log(data)
       dispatch(addUser(data));
-      navigate('/feed');
+      navigate('/');
     } catch (err) {
       console.log(err)
+      setError('Login failed');
     }
   }
   return (
@@ -39,7 +41,7 @@ const Login = () => {
 
         <label className="label px-2" >Password</label>
         <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} className="input my-2 px-2" placeholder="Password" />
-
+        <p className='text-red-500 text-sm'>{error}</p>
         <button className="mt-4 w-[100px] bg-gray-900 px-3 py-2 rounded-lg" onClick={handleLogin} type='submit'>Login</button>
       </form>
     </div>

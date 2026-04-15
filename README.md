@@ -12,7 +12,11 @@
 - confugure store & Add slice for user
 - dispatched and subscribed updated in navbar as per login
 - moved to constant
-- 
+- should not acces other page until login
+- if token not present redirect to login
+- logout feature
+- get feed and add it in store
+- build the usercard on feed
 - db
   - Create free clustor in mongodb
   - create user
