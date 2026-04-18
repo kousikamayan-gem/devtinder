@@ -20,7 +20,7 @@ const Navbar = () => {
       navigate("/login");
 
     } catch (err) {
-      console.error(err)
+      // console.error(err)
     }
   }
   return (
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" />
         </div>
       </div>
       <ul
@@ -47,7 +47,8 @@ const Navbar = () => {
             <span className="badge">New</span>
           </Link>
         </li>
-        <li><a>Settings</a></li>
+        <li><Link to="/connections">Connections</Link></li>
+        <li><Link to="/request">Requests</Link></li>
         <li><Link onClick={handleLogout}>Logout</Link></li>
       </ul>
     </div>

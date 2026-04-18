@@ -17,6 +17,15 @@
 - logout feature
 - get feed and add it in store
 - build the usercard on feed
+- edit profile
+- show toast message
+- feature - all my connections
+- feature - connection request page.
+- feature - accept ,reject request
+- removed it from store
+- send request
+- signup
+- E2E testing
 - db
   - Create free clustor in mongodb
   - create user

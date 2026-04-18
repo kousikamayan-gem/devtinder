@@ -13,7 +13,7 @@ const Body = () => {
   const navigate = useNavigate();
 
   const fetchUser = async() => {
-    if(user) return;
+    if(!user) return;
     try{
     const res = await fetch(BASE_URL+'/profile/view', {
       method: 'GET',

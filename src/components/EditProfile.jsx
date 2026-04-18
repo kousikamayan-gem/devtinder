@@ -36,7 +36,7 @@ const EditProfile = ({user}) => {
                 throw new Error(data.message || 'Failed to save profile');
             }
             const res = await data.json();
-            console.log(res);
+            // console.log(res);
             dispatch(addUser(res?.data));
             setSuccess(true);
             setTimeout(() => {

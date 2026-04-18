@@ -15,15 +15,17 @@ const Feed = () => {
     
     const res = await data.json();
     console.log(res);
-    dispatch(addFeed(res));
+    dispatch(addFeed(res?.data));
   }
   useEffect(() => {
     getFeed();
   },[]);
+  if (!feed) return;
+  if (feed.length === 0) return <h1>No user found!</h1>
   return (
     <div>
-      {console.log(feed?.data[0])}
-     {feed?.data && <UserCard user={feed.data[0]} />}
+      {/* {console.log(feed?.data[0])} */}
+      <UserCard user={feed[0]} />
     </div>
   )
 }
