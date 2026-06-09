@@ -32,10 +32,10 @@ const Connection = () => {
         <h1 className="mx-auto p-4 pb-2 text-3xl opacity-60 tracking-wide">Connections</h1>
           <ul className="list mx-auto bg-base-100 rounded-box shadow-md">
               {connections.map((connection) => {
-                const {firstName, lastName, photoUrl, age, gender, about,_id} = connection;
+                const {firstName, lastName, photoURL, age, gender, about,_id} = connection;
                   return (
                       <li className="list-row" key={_id}>
-                          <div><img className="size-10 rounded-box" src={photoUrl} /></div>
+                          <div><img className="size-10 rounded-box" src={photoURL} /></div>
                           <div className="list-col-grow">
                               <div>{firstName + " " + lastName}</div>
                               <div className="text-xs uppercase font-semibold opacity-60">{about}</div>

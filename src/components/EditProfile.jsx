@@ -9,7 +9,7 @@ const EditProfile = ({user}) => {
     const [age, setAge] = useState(user.age || '');
     const [gender, setGender] = useState(user.gender || '');
     const [about, setAbout] = useState(user.about || '');
-    const [photoUrl, setPhotoUrl] = useState(user.photoUrl || '');
+    const [photoURL, setphotoURL] = useState(user.photoURL || '');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const EditProfile = ({user}) => {
                     age,
                     gender,
                     about,
-                    photoUrl
+                    photoURL
                 }),
                 credentials: "include",
             });
@@ -73,7 +73,7 @@ const EditProfile = ({user}) => {
         <label className="label px-2" >About</label>
         <input type="text" value={about} onChange={(e)=> setAbout(e.target.value)} className="input my-2 px-2"  />
         <label className="label px-2" >Photo URL</label>
-        <input type="text" value={photoUrl} onChange={(e)=> setPhotoUrl(e.target.value)} className="input my-2 px-2" />
+        <input type="text" value={photoURL} onChange={(e)=> setphotoURL(e.target.value)} className="input my-2 px-2" />
         <p className='text-red-500 text-sm'>{error}</p>
         <button className="mt-4 w-[200px] bg-gray-900 px-3 py-2 rounded-lg" onClick={handleSaveProfile} type='submit'>Save Profile</button>
       </form>
@@ -81,7 +81,7 @@ const EditProfile = ({user}) => {
     <div className="card bg-base-300 w-96 shadow-sm">
   <figure>
     <img
-      src={photoUrl}
+      src={photoURL}
       alt="Shoes" />
   </figure>
   <div className="card-body">

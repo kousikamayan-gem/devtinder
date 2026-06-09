@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeFeed } from '../utils/feedSlice';
 
 const UserCard = ( {user} ) => {
-    const {_id, firstName, lastName, about, photoUrl, gender, age} = user;
+    const {_id, firstName, lastName, about, photoURL, gender, age} = user;
     const dispatch = useDispatch();
 
     const handleFeed = async(status) => {
@@ -29,7 +29,7 @@ const UserCard = ( {user} ) => {
     <div className="card bg-base-300 w-96 shadow-sm my-5 mx-auto">
   <figure>
     <img
-      src={photoUrl}
+      src={photoURL}
       alt="Shoes" />
   </figure>
   <div className="card-body">
