@@ -68,7 +68,7 @@
 
 
   Frontend http://13.60.210.160
-  Bcakend http://13.60.210.160:7777/feed
+  Bcakend http://13.60.210.160:7777/feed  => /api/feed
 
   nginx config: 
 
@@ -82,3 +82,16 @@
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
+
+    location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ /index.html;
+        }
+
+# Custom domain name
+  - purchase domain name from godaddy
+  - signup on cloudflare dns mapping
+  - change the nameservers on godaddy and point it to cloudflare
+  - Dns record map
+  - enable ssl
