@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { BASE_URL } from '../utils/constants'
 import { useDispatch, useSelector } from 'react-redux'
 import { addConnection } from '../utils/connectionSlice';
+import { Link } from 'react-router-dom';
 
 const Connection = () => {
 
@@ -40,6 +41,7 @@ const Connection = () => {
                               <div>{firstName + " " + lastName}</div>
                               <div className="text-xs uppercase font-semibold opacity-60">{about}</div>
                           </div>
+                          <Link to={'/chat/' + _id} ><button className="btn btn-sm bg-primary px-2">Chat</button></Link>
                       </li>)
               }
               )

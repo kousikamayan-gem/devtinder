@@ -89,9 +89,15 @@
                 try_files $uri $uri/ /index.html;
         }
 
+    - should also .env file in backend()
+
 # Custom domain name
   - purchase domain name from godaddy
   - signup on cloudflare dns mapping
   - change the nameservers on godaddy and point it to cloudflare
   - Dns record map
   - enable ssl
+
+
+# Real Time Chat using socket.io
+- [Link](https://socket.io/docs/v4/)

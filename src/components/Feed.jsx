@@ -3,19 +3,25 @@ import UserCard from './UserCard'
 import { BASE_URL } from '../utils/constants'
 import { useDispatch, useSelector } from 'react-redux'
 import { addFeed } from '../utils/feedSlice'
+import { useNavigate } from 'react-router-dom'
 
 const Feed = () => {
   const dispatch = useDispatch();
   const feed = useSelector(store => store.feed);
+  const navigate = useNavigate();
   const getFeed = async() => {
-    const data = await fetch(BASE_URL+'/feed', {
+    try
+    {const data = await fetch(BASE_URL+'/feed', {
       method: 'GET',
       credentials: 'include'
     })
     
     const res = await data.json();
     console.log(res);
-    dispatch(addFeed(res?.data));
+    dispatch(addFeed(res?.data))}
+    catch(err) {
+      navigate('/login');
+    }
   }
   useEffect(() => {
     getFeed();
