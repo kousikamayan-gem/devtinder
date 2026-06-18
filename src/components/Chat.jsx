@@ -57,8 +57,8 @@ const Chat = () => {
                             key={index}
                             className={`chat ${
                             user?.firstName === msg.firstName
-                                ? "chat-start"
-                                : "chat-end"
+                                ? "chat-end"
+                                : "chat-start"
                             }`}
                         >
                             <div className="chat-header">

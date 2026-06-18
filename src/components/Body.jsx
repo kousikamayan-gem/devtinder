@@ -13,7 +13,7 @@ const Body = () => {
   const navigate = useNavigate();
 
   const fetchUser = async() => {
-    if(!user) {
+    if(user) {
       return;
     };
     try{
